@@ -58,5 +58,6 @@ describe('블로그 링크 테스트', ()=>{
 
     it('블로그는 같은 창에서 열려야 한다.', ()=>{
         const blogLink = screen.getByText('블로그')
+        expect(blogLink).not.toHaveAttribute('target')
     })
 })
